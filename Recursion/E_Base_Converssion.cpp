@@ -18,7 +18,6 @@ int main()
         cin >> n;
 
         string ans = baseConverse(n);
-        // reverse(ans.begin(), ans.end());
         cout << ans<<endl;
     }
 
