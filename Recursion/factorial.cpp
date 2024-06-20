@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long long int factorial(int n) {
+long long int factorial(long long int n) {
     if (n==0) return 1;
     return n * factorial(n-1);
 }
 
 int main()
 {
-    int n;
+    long long int n;
     cin>>n;
 
     long long int sum = factorial(n);
