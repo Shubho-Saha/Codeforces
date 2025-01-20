@@ -10,20 +10,21 @@ void solve()
     int n;
     cin>>n;
     vector<int> vec(n);
-    for(int i=0; i<n; i++)
-    {
-        cin>>vec[i];
-    }
+    set<int> st;
+    int count = 0;
 
-    bool flag = true;
     for(int i=0; i<n; i++) {
-        if ((vec[i] < i) || (vec[i] > i+2)) {
-            flag = false;
-            break;
+        cin>>vec[i];
+        if (st.count(vec[i]) == 0) {
+            st.insert(vec[i]);
+        } else {
+            st.erase(vec[i]);
+            count++;
         }
     }
-    if (flag) cout<<"YES"<<nl;
-    else cout<<"NO"<<nl;
+    cout<<count<<nl;
+
+
 }
 int main()
 {
